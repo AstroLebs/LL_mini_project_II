@@ -18,6 +18,7 @@ After tidying, I examined the nature of the data I had gathered to plan out how 
 <img src="/images/ERD.png">
 
 Finally, I was ready for analysis... until I realized that my computer permissions were not letting me write to my database and wouldn't update the permissions of the file...
+
 I went back and did some analysis using pandas to find the top 10 points of interest by rating across both APIs. To normalize the rating system (Foursquare's 10 point vs Yelp's 5 point) I divided each rating by the max rating in the API, before multiplying by 10 to return to a 10 point system. I pulled the top 10 by rank from a combined list of each API.
 
 
