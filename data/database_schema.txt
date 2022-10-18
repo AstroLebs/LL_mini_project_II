@@ -1,0 +1,67 @@
+CREATE TABLE fsq_poi (
+    key INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL,
+    fsq_id VARCHAR,
+    distance INTEGER,
+    address VARCHAR,
+    country VARCHAR,
+    cross_street VARCHAR,
+    formatted_address VARCHAR,
+    locality VARCHAR,
+    neighborhood VARCHAR,
+    postcode VARCHAR,
+    region VARCHAR,
+    address_extended VARCHAR,
+    category_id DECIMAL,
+    category_name VARCHAR,
+    category_icon VARCHAR,
+    rating DECIMAL
+);
+CREATE TABLE sqlite_sequence(name,seq);
+CREATE TABLE yelp_poi (
+    key INTEGER PRIMARY KEY AUTOINCREMENT,
+    name VARCHAR NOT NULL,
+    id VARCHAR,
+    distance DECIMAL,
+    rating DECIMAL,
+    address1 VARCHAR,
+    address2 VARCHAR,
+    address3 VARCHAR,
+    city VARCHAR,
+    zip_code VARCHAR,
+    country VARCHAR,
+    state VARCHAR,
+    alias VARCHAR,
+    title VARCHAR
+    );
+CREATE TABLE category (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name VARCHAR UNIQUE
+);
+CREATE TABLE location (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    street VARCHAR,
+    number INTEGER,
+    addition_address VARCHAR,
+    city VARCHAR,
+    country VARCHAR,
+    region VARCHAR,
+    postcode VARCHAR
+);
+CREATE TABLE points_of_interest (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name VARCHAR UNIQUE,
+    yelp_rating INTEGER,
+    fsq_rating DECIMAL,
+    cat_id INTEGER,
+    fsq_id VARCHAR,
+    yelp_id VARCHAR,
+    loc_id INTEGER
+    );
+CREATE TABLE points_of_interest_category (
+    poi_id INTEGER
+    cat_id INTEGER
+    );
+CREATE TABLE temp_linking(
+    id INTEGER PRIMARY KEY AUTOINCREMENT
+);
