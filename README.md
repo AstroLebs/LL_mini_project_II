@@ -18,6 +18,7 @@ After tidying, I examined the nature of the data I had gathered to plan out how 
 <img src="/images/ERD.png">
 
 Finally, I was ready for analysis... until I realized that my computer permissions were not letting me write to my database and wouldn't update the permissions of the file...
+
 I went back and did some analysis using pandas to find the top 10 points of interest by rating across both APIs. To normalize the rating system (Foursquare's 10 point vs Yelp's 5 point) I divided each rating by the max rating in the API, before multiplying by 10 to return to a 10 point system. I pulled the top 10 by rank from a combined list of each API.
 
 
@@ -25,29 +26,28 @@ I went back and did some analysis using pandas to find the top 10 points of inte
 
 I found that the 10 (11 with ties) highest rated points of interest between the two APIs are:
 
-1. (10.00)
-Manoush'eh
-Incognito Coffee
-Gotham Steakhouse & Cocktail Bar
-4th (9.89)
-Commodore Ballroom
-5th (9.78)
-Victoria's Secret
-Sephora
-Hawksworth Restaurant
-8th (9.67)
-The Orpheum
-Le Crocodile Restaurant
-Indigo - Robson
-Abercrombie & Fitch
+1st (10.00) <br/>
+Manoush'eh <br/>
+Incognito Coffee <br/>
+Gotham Steakhouse & Cocktail Bar <br/><br/>
+4th (9.89)<br/>
+Commodore Ballroom<br/><br/>
+5th (9.78)<br/>
+Victoria's Secret<br/>
+Sephora<br/>
+Hawksworth Restaurant<br/><br/>
+8th (9.67)<br/>
+The Orpheum<br/>
+Le Crocodile Restaurant<br/>
+Indigo - Robson<br/>
+Abercrombie & Fitch<br/>
 
 I had issues writing to my database (writing would change permissions not allowing me to write/change again without overwiting).
 I am looking for a solution and will update this section when I do so.
 
 ## Challenges 
 
-###Pulling nested dictionaries and lists out of the APIs:
-My brain still has a hard time actually visualizing where stuff is within the JSON file returned and how to pull the information I actually need out of it. This portion of the project took longer than I hoped though, I know with practice it will get faster.
+Pulling nested dictionaries and lists out of the APIs. My brain still has a hard time actually visualizing where stuff is within the JSON file returned and how to pull the information I actually need out of it. This portion of the project took longer than I hoped though, I know with practice it will get faster.
 
 I also had issues with SQLite changing permissions on my computer so that I couldn't write more than once to any database I created. Still haven't figured out why
 
